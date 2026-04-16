@@ -36,11 +36,11 @@ logger = logging.getLogger(__name__)
 # ── Constants ─────────────────────────────────────────────────────────────────
 
 KNOWLEDGE_BASE_DIR = Path(__file__).parent.parent / "knowledge_base"
-EMBED_MODEL_NAME = "all-MiniLM-L6-v2"
-CHUNK_SIZE = 300          # approximate words per chunk
-CHUNK_OVERLAP = 50        # words of overlap between chunks
-TOP_K = 3
-LOW_CONFIDENCE_THRESHOLD = 0.40
+EMBED_MODEL_NAME = "multi-qa-mpnet-base-dot-v1"
+CHUNK_SIZE = 400          # approximate words per chunk
+CHUNK_OVERLAP = 80        # words of overlap between chunks
+TOP_K = 5
+LOW_CONFIDENCE_THRESHOLD = 0.30
 VET_DISCLAIMER = (
     "\n\n> **Note:** Confidence in retrieved sources is low. "
     "Please consult your veterinarian for personalized guidance."
@@ -183,7 +183,7 @@ def generate_response(
     user_message = f"Question{pet_ctx}{task_ctx}: {query}"
 
     completion = client.chat.completions.create(
-        model="llama-3.1-8b-instant",
+        model="llama-3.3-70b-versatile",
         messages=[
             {"role": "system", "content": system_prompt},
             {"role": "user", "content": user_message},
