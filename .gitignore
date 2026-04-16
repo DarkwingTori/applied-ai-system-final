@@ -1,0 +1,18 @@
+__pycache__/
+.venv/
+.venv_new/
+.pytest_cache/
+.DS_Store
+
+# Environment
+.env
+
+# Logs
+logs/*.log
+
+# Eval output
+eval/eval_results.json
+
+# Frontend build
+frontend/node_modules/
+frontend/dist/
