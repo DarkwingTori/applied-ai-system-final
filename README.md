@@ -12,7 +12,7 @@ Screenshots from the running system:
 
 | Advisor Tab | Schedule Tab |
 |---|---|
-| ![Advisor](assets/pawpal_screenshot.png) | ![Schedule](assets/pawpal_screenshot2.png) |
+| ![Advisor](assets/new_frontend_pawpal.png) | ![Schedule](assets/new_frontend_pawpal2.png) |
 
 **Example inputs shown in demo:**
 1. "How often should I walk my Labrador?" → RAG answer with 82% confidence, source: `dog_exercise`
