@@ -36,7 +36,7 @@ logger = logging.getLogger(__name__)
 # ── Constants ─────────────────────────────────────────────────────────────────
 
 KNOWLEDGE_BASE_DIR = Path(__file__).parent.parent / "knowledge_base"
-EMBED_MODEL_NAME = "multi-qa-mpnet-base-dot-v1"
+EMBED_MODEL_NAME = "all-MiniLM-L6-v2"
 CHUNK_SIZE = 400          # approximate words per chunk
 CHUNK_OVERLAP = 80        # words of overlap between chunks
 TOP_K = 5
